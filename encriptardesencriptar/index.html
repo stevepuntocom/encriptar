@@ -1,0 +1,135 @@
+
+<!DOCTYPE html>
+<meta charset="UTF-8">
+
+<!-- Descripcion: challenge lanzado por Alura
+Version: 1.0
+Autor: Stevenson
+Fecha: 22-Dec-2022 -->
+
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Encriptador</title>
+        <link rel="stylesheet" href="reset.css">
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <header>
+            <div class="descripcion">
+                Encriptador / Desencriptador
+            </div>
+        </header>
+
+        <main>
+            <form class="f_entrada">
+                <fieldset class="fs_entrada">
+                    <textarea id="texto1" class="ta_entrada">
+
+                    </textarea>
+    
+                    <input onclick="f_encriptar()" name="boton_encriptar" id="boton_encriptar" type="submit" value="Encriptar" class="b_encriptar">
+                    <!-- <button>Submit</button> -->
+                    <input onclick="f_desencriptar()" name="boton_desencriptar" id="boton_desencriptar" type="submit" value="Desencriptar" class="b_desencriptar">
+
+                    <textarea id="texto2" class="ta_salida">
+                        
+                    </textarea>
+                </fieldset>
+
+            </form>
+
+
+
+        </main>
+    </body>
+
+    <footer>
+
+        <p class="copyright">&copy Chalenge Alura - 2022</p>
+    </footer>
+</html>
+
+<script>
+
+    var texto_capturado;
+    var control=false;
+
+    var mensaje1;
+    var mensaje2="";
+    entrada.focus();
+
+    function f_encriptar(){
+        mensaje1 = texto1.value;
+        var longitud = texto1.value.length;
+
+        //  document.write("mensaje1 [" + mensaje1 + "], longitud [" + longitud + "], mensaje2 [" + mensaje2 +"] Y SUBSTR 1,1 [" + mensaje1.substr(1,1) + "]");
+        var i=0;
+        
+        while(i<=longitud){
+
+            if(mensaje1.substr(i, 1) == "e"){
+                mensaje2 = mensaje2 + "enter";
+            }
+            else if(mensaje1.substr(i, 1) == "i"){
+                mensaje2 = mensaje2 + "ines";
+            }
+            else if(mensaje1.substr(i, 1) == "a"){
+                mensaje2 = mensaje2 + "ai";
+            }
+            else if(mensaje1.substr(i, 1) == "o"){
+                mensaje2 = mensaje2 + "ober";
+            }
+            else if(mensaje1.substr(i, 1) == "u"){
+                mensaje2 = mensaje2 + "ufat";
+            }
+            else {
+                mensaje2 = mensaje2 + mensaje1.substr(i, 1);
+            }
+
+            i=i+1;
+           
+        }
+
+
+        //return mensaje2;
+         //document.write("Mensaje encriptado: " + mensaje2);
+
+        document.write("<br><br>")
+        document.write("Texto a encriptar: " + mensaje1);
+        document.write("<br><br>")
+        document.write("Texto encriptado: " + mensaje2);
+
+    }
+
+    // while(control==true){
+            // texto2.value=mensaje2;
+        //  }
+
+
+    function f_desencriptar()
+    {
+        // TextoDesEncriptado = "";
+		mensaje1=document.getElementById('texto1').value;
+
+        mensaje2 = mensaje1;
+        mensaje2 = mensaje2.replaceAll("enter", "e");
+        mensaje2 = mensaje2.replaceAll("imes", "i");
+        mensaje2 = mensaje2.replaceAll("ai", "a");
+        mensaje2 = mensaje2.replaceAll("ober", "o");
+        mensaje2 = mensaje2.replaceAll("ufat", "u");
+	
+		document.getElementById('texto2').value=mensaje2;
+        document.write("El mensaje a desencriptar es:");
+        document.write("<br>");
+        document.write("[" + mensaje1 + "]");
+        document.write("<br>");
+        document.write("<br>");
+        document.write("El texto desencriptado es:");
+        document.write("<br>");
+        document.write("[" + mensaje2 + "]");
+
+    }  
+
+
+</script>
