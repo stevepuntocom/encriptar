@@ -3,26 +3,30 @@
 
 <html lang="es">
 
-    <head>
+    <head id="head">
         <meta charset="UTF-8">
         <title>Encriptador</title>
         <link rel="stylesheet" href="reset.css">
-        <!-- <link rel="stylesheet" href="style.css"> -->
+        <link rel="stylesheet" href="style.css">
     </head>
 
     <body>
         <header>
             <div>
-                Encriptador || Desencriptador
+                Encriptador ||| Desencriptador
             </div>
         </header>
 
         <main>
             <div>
                 <form id="form_entrada">
-                    <textarea id="textarea_entrada" placeholder="Escribe aqui"></textarea>
-                    <button id="button_encriptar">Encriptar</button>
-                    <button id="button_desencriptar">Desencriptar</button>
+                    <div id="div_entrada">
+                        <textarea id="textarea_entrada" placeholder="Escribe aqui"></textarea>
+                    </div>
+                    <div id="button_entrada">
+                        <button id="button_encriptar">Encriptar</button>
+                        <button id="button_desencriptar">Desencriptar</button>
+                    </div>
                 </form>
             </div>
 

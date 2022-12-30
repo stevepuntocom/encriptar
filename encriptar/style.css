@@ -1,13 +1,52 @@
 html{
+    background: #ccccff;
+    font-size: 20px;
+}
+
+header{
+    background: #ccccd1;
+    text-align: center;
+}
+
+
+#form_entrada{
+    /* display: inline-block; */
+}
+
+#textarea_entrada{
+    width: 350px;
+    height: 400px;
+    padding: 10px;
+}
+
+#textarea_salida{
+    width: 350px;
+    height: 400px;
+    padding: 10px;
+}
+
+#button_encriptar{
+    width: 100px;
+    height: 40px;
+    padding: 5px;
+}
+
+#button_desencriptar{
+    width: 100px;
+    height: 40px;
+    padding: 5px;
+}
+
+/* html{
     text-align: center;
     background: rgb(221, 169, 136)
-    /* padding: 40px; */
+    padding: 40px;
 }
 
 header{
     background-color: #f0c39e;
     font-size: 18px;
-    /* padding: 20px 0; */
+    padding: 20px 0;
 }
 
 .f_entrada{
@@ -48,7 +87,7 @@ main input{
 .b_desencriptar{
     color: blue;
     border-radius: 8px;
-}
+} */
 
 /*.caja{
     width: 940px;
